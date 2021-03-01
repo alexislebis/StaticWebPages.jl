@@ -2,7 +2,7 @@ module StaticWebPages
 
 using FTPClient, DataStructures, GitHub
 
-using Gtk, GtkReactive
+using Gtk
 
 import Base.show
 
@@ -19,6 +19,6 @@ include("items.jl")
 include("skeleton.jl")
 include("page.jl")
 include("io.jl")
-include("gui.jl")
+include("ui.jl")
 
 end # module StaticWebPages
