@@ -13,6 +13,10 @@ export  export_site, upload_site, paragraphs, images
 export  AbstractItem, Block, Card, TimeLine, GitRepo
 export CardColor, TimeLineColor
 
+function load_example()
+    include(joinpath(@__DIR__,"..","example","content.jl"))
+end
+
 include("constant.jl")
 include("inline.jl")
 include("items.jl")
