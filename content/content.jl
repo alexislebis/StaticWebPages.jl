@@ -296,7 +296,7 @@ github = GitRepo(
 
 githubT = GitRepo(
     "ceri-num/fa-projinfo",
-    "ceri-num/uv-cdaw/tree/main"
+    "ceri-num/uv-cdaw"
 )
 
 page(
