@@ -4,8 +4,8 @@ import StaticWebPages: local_info
 
 ## private information (local folders, connection infos, etc.)
 # content and site paths are always required
-local_info["content"] = "/home/alexis/Works/alexis-lebis-website/content"
-local_info["site"] = "/home/alexis/Works/alexis-lebis-website/build"
+local_info["content"] = "/home/alexis/Work/alexis-lebis-website/content"
+local_info["site"] = "/home/alexis/Work/alexis-lebis-website/build"
 
 # necessary only if using the upload_site function
 local_info["protocol"] = "ftp"
