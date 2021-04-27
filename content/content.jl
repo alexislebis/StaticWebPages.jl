@@ -3,27 +3,28 @@
 ######################################
 
 info["avatar"] = "pic.jpg"
-info["cv"] = "cv.pdf"
+# info["cv"] = "cv.pdf"
 info["lang"] = "en"
 info["name"] = "Alexis Lebis"
 info["title"] = "A. Lebis"
 info["email"] = "contact@alexis.lebis.org"
 
 ## Social Networks (comment/delete lines to unwanted social network, input your personal info for the others)
-info["researchgate"] = "https://www.researchgate.net/profile/Jean_Francois_Baffier"
-info["googlescholar"] = "https://scholar.google.fr/citations?user=zo7FgSIAAAAJ&hl=fr"
-# info["orcid"] = "https://orcid.org/0000-0002-8800-6356"
-info["dblp"] = "https://dblp.org/pid/139/8142"
-info["linkedin"] = "https://www.linkedin.com/in/jeanfrancoisbaffier/"
-info["github"] = "https://github.com/Azzaare"
-info["twitter"] = "https://twitter.com/bioazzaare"
+# info["researchgate"] = "https://www.researchgate.net/profile/Jean_Francois_Baffier"
+info["googlescholar"] = "https://scholar.google.com/citations?user=zU0Z1sMAAAAJ"
+info["orcid"] = "https://orcid.org/0000-0003-2104-8671"
+# info["dblp"] = "https://dblp.org/pid/139/8142"
+# info["linkedin"] = "https://www.linkedin.com/in/jeanfrancoisbaffier/"
+info["github"] = "https://github.com/alexislebis"
+# info["gitlab"] = "https://gvipers.imt-lille-douai.fr/alexis.lebis"
 
 ######################################
 # Contributors user name => real name
 ######################################
-user_to_name["azzaare"] = "Jean-François Baffier"
-user_to_name["nicill"] = "Yago Diez"
-user_to_name["matiaskorman"] = "Matias Korman"
+user_to_name["alexislebis"] = "Alexis Lebis"
+user_to_name["lozenguez"] = "Guillaume Lozenguez"
+# user_to_name["nicill"] = "Yago Diez"
+# user_to_name["matiaskorman"] = "Matias Korman"
 
 ######################################
 # index.html
@@ -290,15 +291,12 @@ page(
 #   option 2: background for the page is set to start with white to emphasize the items
 ######################################
 github = GitRepo(
-    "Azzaare/CompressedStacks.cpp",
-    "Azzaare/StaticWebPages.jl",
-    "Azzaare/Bibliography.jl",
-    "Azzaare/BibParser.jl",
-    "Azzaare/BibInternal.jl",
-    "JuliaGraphs/LightGraphs.jl",
-    "JuliaGraphs/LightGraphsExtras.jl",
-    "JuliaGraphs/SNAPDatasets.jl",
-    "Azzaare/PackageStream.jl"
+    "alexislebis/CAPTEN",
+)
+
+githubT = GitRepo(
+    "ceri-num/fa-projinfo",
+    # "ceri-num/uv-cdaw/tree/main"
 )
 
 page(
@@ -309,6 +307,18 @@ page(
             title="Software",
             hide=true,
             items=github,
+        )
+    ]
+)
+
+page(
+    title="teaching",
+    background=bg_white,
+    sections=[
+        Section(
+            title="Teaching",
+            hide=true,
+            items=githubT,
         )
     ]
 )
