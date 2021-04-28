@@ -306,7 +306,7 @@ page(
     sections=[
         Section(
             title="Software",
-            hide=true,
+            hide=false,
             items=github,
         )
     ]
