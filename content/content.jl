@@ -23,7 +23,8 @@ info["github"] = "https://github.com/alexislebis"
 ######################################
 user_to_name["alexislebis"] = "Alexis Lebis"
 user_to_name["lozenguez"] = "Guillaume Lozenguez"
-# user_to_name["nicill"] = "Yago Diez"
+user_to_name["thieu4122"] = "Mathieu Vermeulen"
+user_to_name["lucfabresse"] = "Luc Fabresse"
 # user_to_name["matiaskorman"] = "Matias Korman"
 
 ######################################
