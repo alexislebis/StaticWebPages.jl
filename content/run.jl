@@ -8,7 +8,7 @@ local_info["content"] = "/home/alexis/Works/alexis-lebis-website/content"
 local_info["site"] = "/home/alexis/Works/alexis-lebis-website/build"
 
 ## Private Access Token (PAT) for GitHub as a github.jl file ; It is optional and can be commented/decommented using #
-local_info["pat4github"] = "/home/alexis/Works/alexis-lebis-website/content"
+local_info["auth_tokens"] = "/home/alexis/Resource/tokens"
 
 # necessary only if using the upload_site function
 local_info["protocol"] = "ftp"
