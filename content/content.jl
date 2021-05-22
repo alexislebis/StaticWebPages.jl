@@ -39,91 +39,50 @@ work_cards = Deck(
     Card(
         "2020",
         "current",
-        "Consultant",
-        "Data Science and Optimization"
+        "Associate Profressor",
+        "IMT Lille Douai, France"
     ),
     Card(
         "2019",
-        "current",
+        "2020",
         "Postdoctoral Researcher",
-        "RIKEN Center for Advanced Intelligence (AIP)"
+        "IMT Lille Douai, France"
         ),
-    Card(
-        "2017",
-        "2019",
-        "International Research Fellow",
-        "Japan Society for the Promotion of Science (hosted at the Tokyo Institute of Technology)"
-    ),
-    Card(
-        "2015",
-        "2017",
-        "Postdoctoral Researcher",
-        "National Institute of Informatics (JST-ERATO Kawarabayashi Large Graph Project)"
-    ),
-    Card(
-        "2012",
-        "2014",
-        "Teaching Assistant",
-        "The University of Tokyo"
-    ),
-    Card(
-        "2009",
-        "2010",
-        "Mathematics Teacher",
-        "Junior High-School (French Ministry of Education)"
-    )
 )
 
 education_cards = Deck(
     Card(
         "Ph.D.",
-        "2015",
-        "Ph.D. of Information Science",
-        "The University of Tokyo"
+        "2019",
+        "Ph.D. in Computer Science",
+        "Sorbonne Université, France"
     ),
     Card(
         "M.Sc.",
-        "2011",
-        "Master of Science (Informatics)",
-        "Paris-Sud University"
-    ),
-    Card(
-        "2008",
-        "2009",
-        "Visiting Master Student",
-        "Paris-Diderot University"
+        "2015",
+        "Master of Science: Aritificial Intelligence and Decision",
+        "Université Claude Bernard Lyon 1, France"
     ),
     Card(
         "B.Sc.",
         "2007",
-        "Bachelor of Informatics-Mathematics",
-        "Paris-Sud University"
+        "Bachelor of Computer Science",
+        "Université de La Rochelle, France"
     ),
-    Card(
-        "2003",
-        "2005",
-        "Higher School Preparatory Classes (Sciences)",
-        "École nationale de chimie physique et biologie de Paris (ENCPB)"
-    ),
-    Card(
-        "Bac.",
-        "2003",
-        "Baccalauréat of Science",
-        "Lycée Louis-le-Grand"
-    )
 )
 
-grants = TimeLine(
+projects = TimeLine(
     Dot(
-        "2017-2019",
-        "JSPS-CNRS fellowship",
-        "Competitive fellowship with an associated grant (KAKENHI 17F17727 ) for international researchers in Japan."
+        "2018-2021",
+        "APACHES (FIPE18-007-VERMEULEN)",
+        "Co-responsible of the APACHES project, which aims to change pedagogical methods in human-centered project-based pedagogy and assists teachers and students.",
     ),
-    Dot(
-        "2012-2015",
-        "MEXT Scholarship",
-        "The Monbukagakusho Scholarship is an academic scholarship offered by the Japanese Ministry of Education, Culture, Sports, Science and Technology (MEXT)."
-    )
+
+    # Dot(
+    #     "2012-2015",
+    #     "MEXT Scholarship",
+    #     "The Monbukagakusho Scholarship is an academic scholarship offered by the Japanese Ministry of Education, Culture, Sports, Science and Technology (MEXT)."
+    # )
 )
 
 biography = Block(
@@ -165,8 +124,8 @@ page(
             )
         ),
         Section(
-            title="Grants",
-            items=grants
+            title="Projects",
+            items=projects
         )
     ]
 )
@@ -247,7 +206,7 @@ modernac = Block(
     )
 )
 
-explainable = Block(
+KE = Block(
     paragraphs(
         """
         context
@@ -256,7 +215,9 @@ explainable = Block(
         resutls
         """
     ),
-    images()
+    images(
+        Image("NAP_ontology.png", "An exemple of an ontology (used to model a narrated analysis process in TEL)")
+    )
 )
 
 page(
@@ -267,20 +228,20 @@ page(
             items=topics
         ),
         Section(
-            title="Network Interdiction",
+            title="Technology Enhanced Learning",
             items=interdiction
         ),
         Section(
-            title="Compressed Data Sructures",
+            title="Learning Analytics",
             items=structure
         ),
         Section(
-            title="Modern Academics",
+            title="Decision Making",
             items=modernac
         ),
         Section(
-            title="Explainable Artificial Intelligence",
-            items=explainable
+            title="Knowledge Engineering",
+            items=KE
         ),
 
     ]
@@ -293,12 +254,17 @@ page(
 ######################################
 github = GitRepo(
     "alexislebis/CAPTEN",
+    "alexislebis/CAPTEN-Ontology"
 )
 
-githubT = GitRepo(
-    "ceri-num/fa-projinfo",
-    "ceri-num/uv-cdaw"
-)
+gitlabS = Deck(
+        Card(
+        "",
+        "",
+        "<a href=\"https://gvipers.imt-lille-douai.fr/m3tal/apaches.prolog_csdvp\">APACHES.Prolog_CSDVP</a>",
+        "Prolog constraint satisfaction decaying variables problem (CSDVP) implementation"
+        ),
+    )
 
 page(
     title="software",
@@ -307,9 +273,85 @@ page(
         Section(
             title="Software",
             hide=false,
+            #items=github,
+        ),
+        Section(
+            title="GitHub",
+            hide=false,
             items=github,
-        )
+        ),
+        Section(
+            title="GitLab",
+            hide=false,
+            items=gitlabS,
+        ),
     ]
+)
+
+######################################
+# teaching.html: github (GitRepo) + timeline
+#   option 1: Section is hidden (to avoid pulling info from GitHub at each run)
+#   option 2: background for the page is set to start with white to emphasize the items
+######################################
+githubT = GitRepo(
+    "ceri-num/fa-projinfo",
+    "ceri-num/uv-cdaw"
+)
+
+teachingIMT = TimeLine(
+    Dot(
+        "2020-2021",
+        "",
+        "<ul><li><em>Project manager in artificial intelligence training</em> | Lecture and exercice class for professional</li>
+            <li><em>Design and Development of Web Applications - Client Side</em> | Lecture and exercice class for graduate students</li>
+            <li><em>Algorithm and programming</em> | Tutorial and exercice class for undergraduate students</li>
+            <li><em>Database management system</em> | Tutorial and exercice class for undergraduate students</li>
+            <li><em>Strategy for solving complex problems through games</em> | Lecture class for undergraduate students</li>
+            <li><em>Harmonisation in Computer Science</em> | Lecture and exercice class for undergraduate students</li>
+        </ul>",
+    ),
+    Dot(
+        "2019-2020",
+        "",
+        "<ul><li><em>Database management system</em> | Tutorial and exercice class for undergraduate students</li>
+        </ul>"
+    )
+)
+
+teachingUCBL = TimeLine(
+    Dot(
+        "2018-2019",
+        "",
+        "<ul><li><em>Foundation of artificial intelligence</em> | Tutorial and exercice class for graduate students</li>
+        <li><em>Algorithms and Object Oriented Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Algorithmics and imperative programming</em> | Tutorial and exercice class for undergraduate students</li>
+        </ul>",
+    ),
+    Dot(
+        "2017-2018",
+        "",
+        "<ul><li><em>Algorithms and functional and recursive Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Algorithms and Object Oriented Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Algorithmics and imperative programming</em> | Tutorial and exercice class for undergraduate students</li>
+        </ul>",
+    ),
+    Dot(
+        "2016-2017",
+        "",
+        "<ul><li><em>Foundation of artificial intelligence</em> | Tutorial and exercice class for graduate students</li>
+        <li><em>Algorithms and functional and recursive Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Algorithms and Object Oriented Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Logic programming</em> | Tutorial and exercice class for undergraduate students</li>
+        </ul>",
+    ),
+    Dot(
+        "2015-2016",
+        "",
+        "<ul><li><em>Algorithms and functional and recursive Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Algorithms and Object Oriented Programming</em> | Tutorial and exercice class for undergraduate students</li>
+        <li><em>Logic programming</em> | Tutorial and exercice class for undergraduate students</li>
+        </ul>",
+    ),
 )
 
 page(
@@ -319,8 +361,25 @@ page(
         Section(
             title="Teaching",
             hide=false,
+            #items=(),
+        ),
+        Double(
+            Section(
+                title="IMT Lille Douai",
+                hide=false,
+                items=teachingIMT,
+            ),
+            Section(
+                title="Université Claude Bernard Lyon 1",
+                hide=false,
+                items=teachingUCBL,
+            ),  
+        ),
+        Section(
+            title="Teaching Ressources",
+            hide=false,
             items=githubT,
-        )
+        ),
     ]
 )
 
