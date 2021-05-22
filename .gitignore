@@ -8,3 +8,5 @@ _git2_*
 Manifest.toml
 /docs/Manifest.toml
 /test/Manifest.toml
+build/*
+content/github.jl
