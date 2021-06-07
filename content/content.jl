@@ -88,21 +88,21 @@ projects = TimeLine(
 biography = Block(
     paragraphs(
     """
-   Jean-François Baffier is an academic researcher at the RIKEN Center for Advanced Intelligence Project (AIP), and a consultant in Artificial Intelligence, Big Data Science, Data Structures, and Algorithms. As an academic, he gives back to society through fundamental research in computer science supplemented by open source libraries and softwares.
+    I am an associate professor in artificial intelligence at the Center for Digital Systems (CERI SN) of $(link("Institut Mines Télécom Lille Douai", "https://imt-lille-douai.fr/")), in France.
     """,
     """
-    Jean-François graduated Master course at University Paris-Sud and got his Ph.D. from the University of Tokyo. He was a member of the ERATO Kawarabayashi Large Project in Tokyo and Sendai, and a JSPS-CNRS research fellow hosted at the Tokyo Institute of Technology (Japan). He also was a JFLI member from October 2011 to August 2018.
+    My research is mainly focused on Decision Making (DM) and Knowledge Engineering (KE), especially applied to Technology Enhanced Learning (T.E.L) for now. I am interested in modeling complex combinatorial TEL problems, understanding their topology and solving them, mostly via constraint-based meta-heuristic approaches. My goal is to provide educational stakeholders with new decision-making tools, adapted to the always changing education context.
     """,
     """
-    His current $(link("research project", "research.hmtl")) involves the study of the “Analysis of information networks,” the “Smart compression for high-scalability of data structures,” and “Explainable Artificial Intelligence.” Other topic of interest covers modeling of failures and routing in Networks, Game Analysis, and AI for Games.
+    I am also interested in reproducible science, and how we can foster it in T.EL., and more generaly in computer science fields. My $(link("PhD thesis", "https://tel.archives-ouvertes.fr/tel-02164400")) laid mostly into this problematic, heavily relying on KE and web semantics. An so, to continue on this reproducibility concerns, I became an ambassador of the foundation $(link("Software Heritage", "https://archive.softwareheritage.org/")).
     """,
     """
-    Jean-François implemented the StaticWebPages.jl package that was used to generate this website using a simple content file. This is a dummy email: $(email("dummy@example.purpose"))
+    I also have an interest in various little things, like game, game AI problems, hiking, kendo, science popularization, climbing, trees, music, teaching...
     """
     ),
     images(
-        Image("cs.png", "Compressed Stack"),
-        Image("knowledge.png", "Flow of Knowledge")
+        Image("NAP_ontology_resized.png", "An exemple of an ontology (used to model a narrated analysis process in TEL)"),
+        Image("ambassador_badge_15.03_V1-1.png", "Software Heritage Ambassador")
     )
 )
 
@@ -294,6 +294,7 @@ page(
 #   option 2: background for the page is set to start with white to emphasize the items
 ######################################
 githubT = GitRepo(
+    "ceri-num/uv-cdpia",
     "ceri-num/fa-projinfo",
     "ceri-num/uv-cdaw"
 )
