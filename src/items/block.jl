@@ -1,17 +1,20 @@
 Image = Pair{AbstractString,AbstractString}
 paragraphs(args::String...) = [p for p in args]
 images(args::Image...) = [img for img in args]
+iframe(url) = url
 
 struct Block <: AbstractItem
     paragraphs::Vector{AbstractString}
     images::Vector{Image}
+    iframe::String
 end
 
+Block(paragraphs, images) = Block(paragraphs, images, "")
+Block(paragraphs, iframe::String) = Block(paragraphs, Vector{Image}(), iframe)
+
 function to_html(section::Block)
-    str =
-    """
-    <div class="cell medium-8 large-9">
-    """
+    full = isempty(section.images) && isempty(section.iframe) ? "" :  "medium-8 large-9"
+    str = """<div class="cell $full">\n"""
 
     for p in section.paragraphs
         str *=
@@ -23,18 +26,28 @@ function to_html(section::Block)
     str *=
     """
     </div>
-    <div class="cell medium-4 large-3 centered">
     """
 
-    for img in section.images
-        str *=
+    if !isempty(section.images) || !isempty(section.iframe)
         """
-        <img class="thumbnail image hide-for-small-only" src="img/$(img.first)" alt="$(img.second)">
+        <div class="cell medium-4 large-3 centered">
         """
+
+        for img in section.images
+            str *=
+            """
+            <img class="thumbnail image hide-for-small-only" src="img/$(img.first)" alt="$(img.second)">
+            """
+        end
+
+        if !isempty(section.iframe)
+            str *= """
+            <iframe src="$(section.iframe)" class="discord-widget"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            </iframe>
+            """
+        end
     end
-
-    str *=
-    """
-    </div>
-    """
+    str *= """</div>\n"""
 end
