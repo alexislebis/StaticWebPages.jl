@@ -88,7 +88,7 @@ projects = TimeLine(
 biography = Block(
     paragraphs(
     """
-    I am an associate professor in artificial intelligence at the Center for Digital Systems (CERI SN) of $(link("Institut Mines Télécom Lille Douai", "https://imt-lille-douai.fr/")), in France, since 2020. Before that, I was a post-doctorate for the $(link("APACHES", "https://apaches.wp.imt.fr/")) project.
+    I am a lecturer in artificial intelligence at the Center for Digital Systems (CERI SN) of $(link("Institut Mines Télécom Lille Douai", "https://imt-lille-douai.fr/")), in France, since 2020. Before that, I was a post-doctorate for the $(link("APACHES", "https://apaches.wp.imt.fr/")) project.
     """,
     """
     My research is mainly focused on Decision Making (DM) and Knowledge Engineering (KE), especially applied to Technology Enhanced Learning (T.E.L) for now. I am interested in providing educational stakeholders with new decision-making tools for complex pedagogical situations, adapted to the always changing education context. As such, I work particularly on modeling complex (and combinatorial) TEL problems, understanding their topology and solving them by using different approaches, such as constraint-based meta-heuristic.
@@ -97,7 +97,7 @@ biography = Block(
     I am also very interested in reproducible science, and how we can foster it in T.EL., and more generaly in computer science fields. My $(link("PhD thesis", "https://tel.archives-ouvertes.fr/tel-02164400")) laid mostly into this problematic, heavily relying on KE and web semantics. An so, to continue on this reproducibility concerns, I became an ambassador of the foundation $(link("Software Heritage", "https://archive.softwareheritage.org/")).
     """,
     """
-    I also have an interest in various little funny things, like games, game AI problems, hiking, kendo, science popularization, climbing, trees, music, teaching...
+    I also have an interest in various little funny things, like games, game AI problems, hiking, kendo, science popularization, climbing, trees & plants, music, teaching...
     """
     ),
     images(
@@ -152,7 +152,7 @@ page(
 topics = Block(
     paragraphs(
         """
-        Principal Research Projects: Network Interdiction, Compressed Data Sructures, Modern Academics, Explainable AI. Other research interest includes Graph Theory, Geometry, Optimization, and Games.
+        Principal Research Projects: Technology Enhanced Learning, Learning Analytics, Knowledge Engineering, Decision Making, Open Science and Games.
         """,
         """
         All of this research is supported by Open-Source Softwares and published as peer-review academic papers. 
@@ -161,49 +161,43 @@ topics = Block(
     images()
 )
 
-interdiction = Block(
+tel_la = Block(
     paragraphs(
         """
-        A situation when a network flow is attacked can be modeled by a game between two players: an attacker who wants to remove a set of links that minimizes the flow value and a defender that wants to maximize the flow value. When the attacker (resp. defender) plays first, the problem is called network interdiction (resp. network adaptive flow). Most of those interdiction problems are intractable.
+        Context
         """,
         """
-        We provide a general framework to solve or approximate interdiction problems in polynomial time, along with Bilevel Mixed-Integer Programs with high accuracy to improve the approximated instances. 
+        Results
         """
     ),
-    images(
-        Image("bmilp.png", "Bilevel Mix-Integer Programming")
-    )
+    images()
 )
 
-structure = Block(
+game = Block(
     paragraphs(
         """
-        External data compression is a compression technique where the explicit data is stored as an external source such as hard-disks, streams, or any combination of distributed devices. The local device stores, in memory or cache, a small amount of explicit data that are the most likely to be used in the future. It also stores information required to stream (by small chunks) the rest of the data from the external source. This last process is called reconstruction.
+        Soon
         """,
         """
-        We use time-space trade-off techniques to execute stack algorithms with external compression in a fashion that provides a linearly longer execution time linear compared to classical stacks while reducing the space used from several order of magnitude.
+        Soon
         """,
         """
-        Current work extends this technique to other type of containers while trying to reduce/erase the reconstruction time. All our algorithms are black-boxes, that is the user only selects a compression rate compared to the original algorithms.
+        Soon
         """
     ),
-    images(
-        Image("cs.png", "Compressed Stack")
-    )
+    images()
 )
 
-modernac = Block(
+decision_making = Block(
     paragraphs(
         """
         context
         """,
         """
-        resutls
+        results
         """
     ),
-    images(
-        Image("knowledge.png", "Flow of Knowledge")
-    )
+    images()
 )
 
 KE = Block(
@@ -212,7 +206,7 @@ KE = Block(
         context
         """,
         """
-        resutls
+        results
         """
     ),
     images(
@@ -228,22 +222,21 @@ page(
             items=topics
         ),
         Section(
-            title="Technology Enhanced Learning",
-            items=interdiction
-        ),
-        Section(
-            title="Learning Analytics",
-            items=structure
+            title="Technology Enhanced Learning & Learning Analytics",
+            items=tel_la
         ),
         Section(
             title="Decision Making",
-            items=modernac
+            items=decision_making
         ),
         Section(
             title="Knowledge Engineering",
             items=KE
         ),
-
+        Section(
+            title="Game (soon™)",
+            items=game
+        ),
     ]
 )
 
