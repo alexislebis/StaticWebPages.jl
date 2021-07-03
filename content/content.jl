@@ -7,7 +7,7 @@ info["avatar"] = "pic.jpg"
 info["lang"] = "en"
 info["name"] = "Alexis Lebis"
 info["title"] = "A. Lebis"
-info["email"] = "contact@alexis.lebis.org"
+info["email"] = "alexis.lebis@imt-lille-douai.fr"
 
 ## Social Networks (comment/delete lines to unwanted social network, input your personal info for the others)
 # info["researchgate"] = "https://www.researchgate.net/profile/Jean_Francois_Baffier"
@@ -39,7 +39,7 @@ work_cards = Deck(
     Card(
         "2020",
         "current",
-        "Associate Profressor",
+        "Lecturer",
         "IMT Lille Douai, France"
     ),
     Card(
